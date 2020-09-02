@@ -1,27 +1,10 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import logo from "../images/E.MailLogo.png";
 import SearchBar from "./SearchBar";
 import "../App.css";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-    "& > *": {
-      margin: theme.spacing(1),
-      width: "25ch",
-    },
-  },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: "center",
-    color: theme.palette.text.secondary,
-  },
-}));
-
 const TopNavbar = () => {
-  const classes = useStyles();
 
   return (
     <Grid container>

@@ -2,7 +2,6 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import SearchIcon from "@material-ui/icons/Search";
 import TextField from "@material-ui/core/TextField";
-import MenuItem from "@material-ui/core/MenuItem";
 import InputAdornment from "@material-ui/core/InputAdornment";
 import '../App.css';
 
@@ -23,7 +22,7 @@ const SearchBar = () => {
       <TextField
         id="outlined-select-currency"
         select
-        label="Select"
+        label="Search"
         variant="outlined"
         InputProps={{
           startAdornment: (
