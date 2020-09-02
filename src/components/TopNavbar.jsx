@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import logo from "../images/E.MailLogo.png";
 import SearchBar from "./SearchBar";
+import '../App.css';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -26,7 +27,7 @@ const TopNavbar = () => {
     <div className={classes.root}>
       <Grid container spacing={3}>
         <Grid item xs={3}>
-          <img src={logo} alt="Logo" />;
+          <img id="logoImage" src={logo} alt="Logo" />;
         </Grid>
         <Grid item xs={6}>
           <SearchBar />
