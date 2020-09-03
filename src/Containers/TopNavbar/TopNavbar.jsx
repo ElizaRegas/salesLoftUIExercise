@@ -30,7 +30,7 @@ const TopNavbar = () => {
         </Col>
         <Col xs={2}>
           <Button
-            id="settingsButton"
+            id="moreButton"
             className="button"
             // onClick={() => setIsSidebarOpen(true)}
           >
