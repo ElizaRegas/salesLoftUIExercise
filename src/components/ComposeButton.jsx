@@ -1,22 +1,11 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    '& > *': {
-      margin: theme.spacing(1),
-    },
-  },
-}));
+import React from "react";
+import Button from "react-bootstrap/Button";
 
 export default function ComposeButton() {
-  const classes = useStyles();
-
   return (
-    <div className={classes.root}>
-      <Button variant="contained" color="primary" href="#contained-buttons">
-        Link
+    <div className="mb-2">
+      <Button variant="primary" size="default">
+        Compose
       </Button>
     </div>
   );

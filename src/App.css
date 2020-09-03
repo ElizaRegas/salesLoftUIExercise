@@ -1,17 +1,3 @@
-.MuiGrid-container {
-  width: 100%;
-}
-
-.MuiTextField-root {
-  width: 100% !important;
-  margin: auto !important;
-}
-
-#emailPaper {
-  height: 20px;
-  width: 100%;
-}
-
-#logoImage {
+#headerLogo {
   width: 100px;
 }
