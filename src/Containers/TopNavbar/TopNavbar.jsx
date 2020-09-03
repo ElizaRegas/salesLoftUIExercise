@@ -3,20 +3,17 @@ import {
   Container,
   Row,
   Col,
-  InputGroup,
-  FormControl,
-  Button,
-  Dropdown,
+  Button
 } from "react-bootstrap";
-import { faSearch, faUserCircle, faCog, faEllipsisV } from "@fortawesome/free-solid-svg-icons";
+import { faUserCircle, faEllipsisV } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import logo from "../images/E.MailLogo.png";
+import logo from "../../images/E.MailLogo.png";
 import SearchBar from "./SearchBar";
-import "../App.css";
+import "../../App.css";
 
 const TopNavbar = () => {
   return (
-    <Container>
+    <Container id="topNavbar">
       <Row>
         <Col xs={2}>
           <Button
@@ -29,14 +26,7 @@ const TopNavbar = () => {
           <img id="headerLogo" src={logo} alt="Email logo"></img>
         </Col>
         <Col xs={8}>
-          <InputGroup className="mb-3">
-            <InputGroup.Prepend>
-              <Button variant="outline-secondary">
-                <FontAwesomeIcon icon={faSearch} />
-              </Button>
-            </InputGroup.Prepend>
-            <FormControl aria-describedby="basic-addon1" />
-          </InputGroup>
+          <SearchBar />
         </Col>
         <Col xs={2}>
           <Button
@@ -44,7 +34,7 @@ const TopNavbar = () => {
             className="button"
             // onClick={() => setIsSidebarOpen(true)}
           >
-            <FontAwesomeIcon icon={faCog} />
+            <FontAwesomeIcon icon={faEllipsisV} />
           </Button>
           <Button
             id="9DotGridButton"

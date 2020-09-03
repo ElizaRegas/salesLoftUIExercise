@@ -1,8 +1,8 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import SideNavbar from "./components/SideNavbar.jsx";
-import TopNavbar from "./components/TopNavbar.jsx";
-import EmailDisplay from "./components/EmailDisplay.jsx";
+import TopNavbar from "./Containers/TopNavbar/TopNavbar.jsx";
+import EmailDisplay from "./Containers/Body/EmailDisplay.jsx";
 import "./App.css";
 
 function App() {
@@ -10,7 +10,17 @@ function App() {
     <div>
       <TopNavbar />
       <Container>
-        <SideNavbar />
+        <Row>
+          <Col xs={2}>
+            <SideNavbar />
+          </Col>
+          <Col xs={8}>
+            <EmailDisplay />
+          </Col>
+          <Col xs={2}>
+
+          </Col>
+        </Row>
       </Container>
     </div>
   );
