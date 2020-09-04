@@ -1,27 +1,27 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import SideNavbar from "./components/SideNavbar.jsx";
+import { Row, Col } from "react-bootstrap";
+import SideNavbar from "./Containers/SideNavbar/SideNavbar.jsx";
 import TopNavbar from "./Containers/TopNavbar/TopNavbar.jsx";
 import EmailDisplay from "./Containers/Body/EmailDisplay.jsx";
+import BodyHeader from "./Containers/Body/BodyHeader.jsx";
 import "./App.css";
 
 function App() {
   return (
     <div>
       <TopNavbar />
-      <Container>
         <Row>
           <Col xs={2}>
             <SideNavbar />
           </Col>
           <Col xs={8}>
+            <BodyHeader />
             <EmailDisplay />
           </Col>
           <Col xs={2}>
 
           </Col>
         </Row>
-      </Container>
     </div>
   );
 }

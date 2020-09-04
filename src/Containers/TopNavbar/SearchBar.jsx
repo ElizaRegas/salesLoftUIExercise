@@ -6,6 +6,8 @@ import {
   Form,
   Col,
   Row,
+  DropdownButton,
+  Dropdown,
 } from "react-bootstrap";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -18,14 +20,35 @@ const SearchBar = () => {
         <Col xs={1}>
           <InputGroup>
             <InputGroup.Prepend>
-              <Button variant="outline-secondary">
+              <Button
+                id="searchButton"
+                className="searchbarButton"
+                variant="outline-secondary"
+              >
                 <FontAwesomeIcon icon={faSearch} />
               </Button>
             </InputGroup.Prepend>
           </InputGroup>
         </Col>
-        <Col xs={11}>
-          <FormControl aria-describedby="basic-addon1" />
+        <Col xs={10}>
+          <FormControl
+            aria-describedby="basic-addon1"
+            placeholder="Search mail"
+          />
+        </Col>
+        <Col xs={1}>
+          <DropdownButton
+            as={InputGroup.Append}
+            variant="outline-secondary"
+            id="input-group-dropdown-2"
+            className="searchbarButton"
+          >
+            <Dropdown.Item href="#">Action</Dropdown.Item>
+            <Dropdown.Item href="#">Another action</Dropdown.Item>
+            <Dropdown.Item href="#">Something else here</Dropdown.Item>
+            <Dropdown.Divider />
+            <Dropdown.Item href="#">Separated link</Dropdown.Item>
+          </DropdownButton>
         </Col>
       </Row>
     </Form>

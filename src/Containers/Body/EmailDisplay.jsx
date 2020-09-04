@@ -1,27 +1,29 @@
 import React from "react";
-import { Row, Col, Card, Form } from "react-bootstrap";
+import { Container, Row, Col, Card, Form } from "react-bootstrap";
 import messages from "../../emails.json";
 import { Star } from "react-bootstrap-icons";
 import "../../App.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 const EmailDisplay = () => {
-
-  let month = new Array();
-  month[0] = "January";
-  month[1] = "February";
-  month[2] = "March";
-  month[3] = "April";
-  month[4] = "May";
-  month[5] = "June";
-  month[6] = "July";
-  month[7] = "August";
-  month[8] = "September";
-  month[9] = "October";
-  month[10] = "November";
-  month[11] = "December";
+  const month = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
 
   return (
-    <div>
+    <Container>
       {messages.messages.map((message) => {
         const emailTimeStamp = new Date(`${message.date}`);
         const monthName = month[emailTimeStamp.getMonth()];
@@ -30,17 +32,23 @@ const EmailDisplay = () => {
 
         return (
           <Row>
-            <Col xs={12}>
+            <Col xs={10}>
               <Card className="emailMessage">
                 <Row>
                   <Col xs={2}>
                     <Form.Group controlId="formBasicCheckbox">
                       <Form.Check type="checkbox" />
                       <Star star="1" />
+                      <FontAwesomeIcon
+                        id="importantChevron"
+                        icon={faChevronRight}
+                      />
                     </Form.Group>
                   </Col>
-                  <Col xs={4}>{message.sender}</Col>
-                  <Col xs={4}>{message.subject}</Col>
+                  <Col xs={3}>{message.sender}</Col>
+                  <Col xs={5} className="subjectLine">
+                    {message.subject}
+                  </Col>
                   <Col xs={2}>
                     {monthName} {emailTimeStamp.getDate()}
                   </Col>
@@ -55,7 +63,7 @@ const EmailDisplay = () => {
           </Row>
         );
       })}
-    </div>
+    </Container>
   );
 };
 
