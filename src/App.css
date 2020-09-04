@@ -1,38 +1,193 @@
-.App {
-  text-align: center;
+body {
+  color: #777a7e;
+  font-family: "Roboto";
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.button {
+  background: none;
+  border-radius: 50%;
+  border: none;
+  color: #5f6368;
+  width: 34px;
+  padding: 6px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.button:hover {
+  background-color: #f1f3f4 !important;
+  color: #5f6368 !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.button:active,
+.button:focus {
+  background-color: #f1f3f4 !important;
+  color: gray;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
-.App-link {
-  color: #61dafb;
+.emailMessage {
+  padding: 10px;
+  height: 3.4vw;
+  overflow: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.emailMessage:active,
+.emailMessage:hover {
+  height: 100%;
+}
+
+.form-check {
+  display: inline-block !important;
+}
+
+.form-control {
+  background-color: #f1f3f4;
+  border: none;
+  box-shadow: none;
+  height: 50px;
+  font-size: 17px;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border: solid 1px lightgrey;
+}
+
+.searchbarButton:hover {
+  border: none;
+}
+.subjectLine {
+  text-overflow: ellipsis !important;
+}
+
+#bodyHeader {
+  padding: 10px;
+  border-bottom: solid 1px #eceff1;
+}
+
+#caretDown {
+  display: inline;
+}
+
+#composeButton {
+  margin: 16px 8px;
+  border-radius: 25px;
+  width: 150px;
+  height: 49px;
+  font-size: 15px;
+  background-color: #fce8e6;
+  color: #d93025;
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302),
+    0 1px 3px 1px rgba(60, 64, 67, 0.149);
+  border: none;
+}
+
+#gmailLogo {
+  height: 30px;
+  transform: rotate(270deg);
+  margin: 0px 5px;
+}
+
+#googlePlusSign {
+  width: 40px;
+  position: relative;
+  bottom: 2px;
+  right: 10px;
+}
+#hamburger {
+  width: 50px;
+  position: relative;
+  top: 3px;
+}
+
+#hamburger:hover {
+  color: black;
+}
+
+#hamburgerButton {
+  width: 50px;
+  height: 44px;
+  padding: unset;
+}
+
+#header {
+  font-size: 23px;
+  display: inline;
+  font-weight: 400;
+  position: relative;
+  top: 6px;
+  left: 8px;
+}
+
+#input-group-dropdown-2 {
+  width: 70px !important;
+  margin: 0px 0px 0px -35px !important;
+  background-color: #f1f3f4;
+  padding: 6px;
+  height: 50px !important;
+  border-radius: 8px !important;
+}
+
+#input-group-dropdown-2:hover {
+  border: none;
+}
+
+#input-group-dropdown-2:active,
+#input-group-dropdown-2:focus,
+#input-group-dropdown-2:visited {
+  outline: none;
+  box-shadow: none;
+  color: black;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 5px 0px;
+}
+
+#profilePic {
+  background-color: transparent;
+  border: none;
+}
+#profilePicImg {
+  width: 50px;
+}
+
+#profilePicImg:active,
+#profilePicImg:hover {
+  border: none;
+}
+
+#rightSideButtons {
+  height: 44px;
+  position: relative;
+  top: -8px;
+}
+
+#searchButton {
+  background-color: #f1f3f4;
+  color: #5f6368;
+  width: 6vw;
+  height: 50px;
+  padding: 0px;
+  border-radius: 8px;
+}
+
+#searchButton:active,
+#searchButton:focus {
+  outline: none;
+  box-shadow: none;
+  border: none;
+  color: black;
+}
+
+#settingsCogImg {
+  width: 50px;
+  position: relative;
+  left: -15px;
+}
+
+#topNavbar {
+  padding: 10px;
+  border-bottom: solid 1px #eceff1;
 }
