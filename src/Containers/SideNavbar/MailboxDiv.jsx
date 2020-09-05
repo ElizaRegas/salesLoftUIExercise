@@ -1,5 +1,5 @@
 import React from "react";
-import { Dropdown, Button, ButtonGroup, Row } from "react-bootstrap";
+import { Button, Row } from "react-bootstrap";
 import {
   faInbox,
   faStar,
@@ -38,6 +38,7 @@ const MailboxDiv = () => {
       case "faStickyNote":
         icon = faStickyNote;
         break;
+      default:
     }
     return icon;
   };
@@ -62,7 +63,7 @@ const MailboxDiv = () => {
           <FontAwesomeIcon icon={faCaretDown} />
         </Button>
         <FontAwesomeIcon id="faTag" icon={faTag} />
-        <span id="catogoriesText">Categories</span>
+        <span id="categoryText">Categories</span>
       </div>
       <div className="categoryItems">
         <FontAwesomeIcon icon={faPlane} />

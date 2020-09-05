@@ -3,6 +3,12 @@ body {
   font-family: "Roboto";
 }
 
+.activeInbox {
+  border-bottom: solid 5px red;
+  color: red;
+  padding-bottom: 15px;
+}
+
 .bottomBoxShadow {
   box-shadow: -1px 2px 2px #f1f3f4;
 }
@@ -37,15 +43,11 @@ body {
 .categoryItemsText {
   padding: 0px 16px
 }
+
 .emailMessage {
   padding: 10px;
-  height: 3.4vw;
-  overflow: auto;
-}
-
-.emailMessage:active,
-.emailMessage:hover {
-  height: 100%;
+  height: 50px;
+  overflow: hidden;
 }
 
 .form-check {
@@ -105,8 +107,12 @@ body {
   top: 10px;
 }
 
-#catogoriesText {
+#categoryText {
   margin: 19px;
+}
+
+#categoryHeaders {
+  margin: 5px 8px 15px 5px;
 }
 
 #composeButton {
@@ -120,6 +126,14 @@ body {
   box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302),
     0 1px 3px 1px rgba(60, 64, 67, 0.149);
   border: none;
+}
+
+#emailCheckbox {
+  padding: 4px 0px 0px 13px;
+}
+
+#emailStar {
+  margin: 0px 20px 4px;
 }
 
 #faTag {
