@@ -54,6 +54,11 @@ body {
   border: solid 1px lightgrey;
 }
 
+.input-group-text {
+  border: none;
+  background-color: transparent;
+}
+
 .searchbarButton:hover {
   border: none;
 }
@@ -63,11 +68,11 @@ body {
 
 #bodyHeader {
   padding: 10px;
-  border-bottom: solid 1px #eceff1;
 }
 
 #caretDown {
-  display: inline;
+  position: relative;
+  top: 10px;
 }
 
 #composeButton {
@@ -120,6 +125,10 @@ body {
   left: 8px;
 }
 
+#hrLineAboveEmail{
+  border-top: solid 1px #eceff1;
+  overflow: scroll;
+}
 #input-group-dropdown-2 {
   width: 70px !important;
   margin: 0px 0px 0px -35px !important;
@@ -156,6 +165,14 @@ body {
 #profilePicImg:active,
 #profilePicImg:hover {
   border: none;
+}
+
+#redo {
+
+}
+
+#redoButton {
+  margin: 0px 15px;
 }
 
 #rightSideButtons {

@@ -23,12 +23,12 @@ const EmailDisplay = () => {
   ];
 
   return (
-    <Container>
+    <Container id="hrLineAboveEmail">
+      <br />
       {messages.messages.map((message) => {
         const emailTimeStamp = new Date(`${message.date}`);
         const monthName = month[emailTimeStamp.getMonth()];
-
-        console.log(emailTimeStamp);
+        
 
         return (
           <Row>
