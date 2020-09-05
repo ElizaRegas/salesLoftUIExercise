@@ -3,6 +3,10 @@ body {
   font-family: "Roboto";
 }
 
+.bottomBoxShadow {
+  box-shadow: -1px 2px 2px #f1f3f4;
+}
+
 .button {
   background: none;
   border-radius: 50%;
@@ -26,6 +30,13 @@ body {
   box-shadow: none !important;
 }
 
+.categoryItems {
+  margin: 10px 0px 15px 50px;
+}
+
+.categoryItemsText {
+  padding: 0px 16px
+}
 .emailMessage {
   padding: 10px;
   height: 3.4vw;
@@ -59,6 +70,25 @@ body {
   background-color: transparent;
 }
 
+.mailboxIcon {
+  margin-right: 20px;
+}
+.mailboxRow {
+  padding: 5px 10px 10px 20px;
+}
+
+.meetDiv {
+  height: 100px !important;
+  padding-left: 30px !important;
+}
+
+.meetItemDiv {
+  margin-bottom: 10px;
+}
+
+.meetItemText {
+  padding: 5px 10px 20px 0px;
+}
 .searchbarButton:hover {
   border: none;
 }
@@ -75,8 +105,12 @@ body {
   top: 10px;
 }
 
+#catogoriesText {
+  margin: 19px;
+}
+
 #composeButton {
-  margin: 16px 8px;
+  margin: 16px 16px;
   border-radius: 25px;
   width: 150px;
   height: 49px;
@@ -86,6 +120,10 @@ body {
   box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302),
     0 1px 3px 1px rgba(60, 64, 67, 0.149);
   border: none;
+}
+
+#faTag {
+  transform: rotate(135deg);
 }
 
 #gmailLogo {
@@ -114,6 +152,16 @@ body {
   width: 50px;
   height: 44px;
   padding: unset;
+}
+
+#hangoutProfilePic {
+  background-color: transparent;
+  border: none;
+  margin: -15px;
+}
+
+#hangoutProfilePicImg {
+  width: 50px;
 }
 
 #header {
@@ -154,10 +202,17 @@ body {
   margin: 5px 0px;
 }
 
+#mailboxDiv {
+  height: 175px;
+  overflow: auto;
+  resize: both;
+}
+
 #profilePic {
   background-color: transparent;
   border: none;
 }
+
 #profilePicImg {
   width: 50px;
 }
@@ -202,6 +257,10 @@ body {
   width: 50px;
   position: relative;
   left: -15px;
+}
+
+#staticMailbox {
+  padding: 0px 30px;
 }
 
 #topNavbar {

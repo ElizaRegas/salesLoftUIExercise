@@ -2,7 +2,7 @@ import React from "react";
 import { Row, Col, InputGroup, Button } from "react-bootstrap";
 import { faCaretDown, faRedo, faEllipsisV } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "../../App.css";
+import "../../css:scss/App.css";
 
 const BodyHeader = () => {
   return (

@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Inbox",
+    "icon": "faInbox",
+    "id": "inboxId"
+  },
+  {
+    "name": "Starred",
+    "icon": "faStar",
+    "id": "starredId"
+  },
+  {
+    "name": "Snoozed",
+    "icon": "faClock",
+    "id": "snoozedId"
+  },
+  {
+    "name": "Important",
+    "icon": "faChevronRight",
+    "id": "importantId"
+  },
+  {
+    "name": "Sent",
+    "icon": "faPaperPlane",
+    "id": "sentId"
+  },
+  {
+    "name": "Drafts",
+    "icon": "faStickyNote",
+    "id": "draftsId"
+  }
+]

@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col, Card, Form } from "react-bootstrap";
 import messages from "../../emails.json";
 import { Star } from "react-bootstrap-icons";
-import "../../App.css";
+import "../../css:scss/App.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 

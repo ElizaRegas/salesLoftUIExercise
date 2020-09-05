@@ -6,7 +6,7 @@ import SearchBar from "./SearchBar";
 import gmailLogo from "../../images/gmailLogo.png";
 import hamburger from "../../images/hamburger.png";
 import profilePic from "../../images/profilePic.png";
-import "../../App.css";
+import "../../css:scss/App.css";
 
 const TopNavbar = () => {
   return (
