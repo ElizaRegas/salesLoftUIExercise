@@ -154,6 +154,10 @@ body {
   padding: unset;
 }
 
+#hangoutName {
+  margin: 0px 5px;
+}
+
 #hangoutProfilePic {
   background-color: transparent;
   border: none;

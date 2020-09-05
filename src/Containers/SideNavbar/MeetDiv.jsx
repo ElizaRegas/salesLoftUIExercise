@@ -1,6 +1,6 @@
 import React from "react";
 import { Row, Col, Button } from "react-bootstrap";
-import { faVideo, faKeyboard } from "@fortawesome/free-solid-svg-icons";
+import { faVideo, faKeyboard, faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import profilePic from "../../images/profilePic.png";
 
@@ -18,11 +18,13 @@ const MeetDiv = () => {
           <span className="meetItemText">Join a meeting</span>
         </div>
       </div>
-      <div className="meetDiv">
+      <div className="meetDiv bottomBoxShadow">
         <h5>Hangouts</h5>
         <Button id="hangoutProfilePic">
           <img id="hangoutProfilePicImg" src={profilePic} alt="user profile" />{" "}
         </Button>
+        <span id="hangoutName">Elizabeth</span>
+        <FontAwesomeIcon className="faCaretDown" icon={faCaretDown} />
       </div>
     </div>
   );
