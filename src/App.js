@@ -4,7 +4,7 @@ import SideNavbar from "./Containers/SideNavbar/SideNavbar.jsx";
 import TopNavbar from "./Containers/TopNavbar/TopNavbar.jsx";
 import EmailDisplay from "./Containers/Body/EmailDisplay.jsx";
 import BodyHeader from "./Containers/Body/BodyHeader.jsx";
-import "./App.css";
+import "./css:scss/App.css";
 
 function App() {
   return (

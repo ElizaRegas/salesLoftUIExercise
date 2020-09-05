@@ -11,7 +11,7 @@ import {
 } from "react-bootstrap";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "../../App.css";
+import "../../css:scss/App.css";
 
 const SearchBar = () => {
   return (
