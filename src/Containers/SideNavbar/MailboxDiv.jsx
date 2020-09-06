@@ -14,6 +14,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import mailboxDivInfo from "../../mailboxDivInfo.json";
+import AppContext from "../../AppContext.jsx";
 import "../../css:scss/App.css";
 
 const MailboxDiv = () => {
@@ -44,36 +45,65 @@ const MailboxDiv = () => {
   };
 
   return (
-    <div id="mailboxDiv" className="bottomBoxShadow">
-      <div id="staticMailbox">
-        {mailboxDivInfo.map((mailbox) => {
-          return (
-            <Row className="mailboxRow">
-              <FontAwesomeIcon
-                className="mailboxIcon"
-                icon={getIcon(mailbox.icon)}
-              />
-              {mailbox.name}
-            </Row>
-          );
-        })}
-      </div>
-      <div>
-        <Button id="categoryDropdownCaret" className="button">
-          <FontAwesomeIcon icon={faCaretDown} />
-        </Button>
-        <FontAwesomeIcon id="faTag" icon={faTag} />
-        <span id="categoryText">Categories</span>
-      </div>
-      <div className="categoryItems">
-        <FontAwesomeIcon icon={faPlane} />
-        <span className="categoryItemsText">Travel</span>
-      </div>
-      <div className="categoryItems">
-        <FontAwesomeIcon icon={faBuilding} />
-        <span className="categoryItemsText">Work</span>
-      </div>
-    </div>
+    <AppContext.Consumer>
+      {({ emailFilters, setEmailFilters }) => {
+        return (
+          <div id="mailboxDiv" className="bottomBoxShadow">
+            <div id="staticMailbox">
+              {mailboxDivInfo.map((mailbox) => {
+                return (
+                  <Row className="mailboxRow">
+                    <FontAwesomeIcon
+                      className="mailboxIcon"
+                      icon={getIcon(mailbox.icon)}
+                    />
+                    {mailbox.name}
+                  </Row>
+                );
+              })}
+            </div>
+            <div
+              onClick={() =>
+                setEmailFilters({
+                  type: "tag",
+                  value: "inbox",
+                })
+              }
+            >
+              <Button id="categoryDropdownCaret" className="button">
+                <FontAwesomeIcon icon={faCaretDown} />
+              </Button>
+              <FontAwesomeIcon id="faTag" icon={faTag} />
+              <span id="categoryText">Categories</span>
+            </div>
+            <div
+              className="categoryItems"
+              onClick={() =>
+                setEmailFilters({
+                  type: "tag",
+                  value: "travel",
+                })
+              }
+            >
+              <FontAwesomeIcon icon={faPlane} />
+              <span className="categoryItemsText">Travel</span>
+            </div>
+            <div
+              className="categoryItems"
+              onClick={() =>
+                setEmailFilters({
+                  type: "tag",
+                  value: "work",
+                })
+              }
+            >
+              <FontAwesomeIcon icon={faBuilding} />
+              <span className="categoryItemsText">Work</span>
+            </div>
+          </div>
+        );
+      }}
+    </AppContext.Consumer>
   );
 };
 

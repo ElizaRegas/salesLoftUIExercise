@@ -9,13 +9,29 @@ body {
   padding-bottom: 15px;
 }
 
+.activeTravel {
+  border-bottom: solid 5px blue;
+  color: blue;
+  padding-bottom: 15px;
+}
+
+.activeWork {
+  border-bottom: solid 5px green;
+  color: green;
+  padding-bottom: 15px;
+}
+
+.bodyHeaderIcon:hover {
+  border-radius: 50% !important;
+}
+
 .bottomBoxShadow {
   box-shadow: -1px 2px 2px #f1f3f4;
 }
 
 .button {
   background: none;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   border: none;
   color: #5f6368;
   width: 34px;

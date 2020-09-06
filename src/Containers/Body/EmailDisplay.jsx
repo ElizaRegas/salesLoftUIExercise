@@ -1,11 +1,10 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import messages from "../../emails.json";
 import "../../css:scss/App.css";
 import EmailItem from "./EmailItem";
+import AppContext from "../../AppContext";
 
 const EmailDisplay = () => {
-
   const month = [
     "January",
     "February",
@@ -22,21 +21,27 @@ const EmailDisplay = () => {
   ];
 
   return (
-    <Container id="hrLineAboveEmail">
-      <br />
-      {messages.messages.map((message) => {
-        const emailTimeStamp = new Date(`${message.date}`);
-        const monthName = month[emailTimeStamp.getMonth()];
-
+    <AppContext.Consumer>
+      {({ filteredMessages }) => {
         return (
-          <EmailItem
-            monthName={monthName}
-            message={message}
-            emailTimeStamp={emailTimeStamp}
-          />
+          <Container id="hrLineAboveEmail">
+            <br />
+            {filteredMessages.map((message) => {
+              const emailTimeStamp = new Date(`${message.date}`);
+              const monthName = month[emailTimeStamp.getMonth()];
+
+              return (
+                <EmailItem
+                  monthName={monthName}
+                  message={message}
+                  emailTimeStamp={emailTimeStamp}
+                />
+              );
+            })}
+          </Container>
         );
-      })}
-    </Container>
+      }}
+    </AppContext.Consumer>
   );
 };
 

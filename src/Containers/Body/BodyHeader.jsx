@@ -16,26 +16,26 @@ const BodyHeader = () => {
         <Col xs={12}>
           <InputGroup id="bodyHeader" className="mb-3 bottomBoxShadow">
             <InputGroup.Prepend>
-              <InputGroup.Checkbox aria-label="Checkbox for following text input" />
+              <InputGroup.Checkbox className="button" aria-label="Checkbox for following text input" />
               <FontAwesomeIcon id="caretDown" icon={faCaretDown} />
               <Button
                 id="redoButton"
                 className="button"
                 // onClick={() => setIsSidebarOpen(true)}
               >
-                <FontAwesomeIcon id="redo" icon={faRedo} />
+                <FontAwesomeIcon id="redo" className="bodyHeaderIcon" icon={faRedo} />
               </Button>
               <Button
                 className="button"
                 // onClick={() => setIsSidebarOpen(true)}
               >
-                <FontAwesomeIcon icon={faEllipsisV} />
+                <FontAwesomeIcon className="bodyHeaderIcon" icon={faEllipsisV} />
               </Button>
             </InputGroup.Prepend>
           </InputGroup>{" "}
         </Col>
       </Row>
-      <CategoryHeader />
+      {/* <CategoryHeader /> */}
     </div>
   );
 };
