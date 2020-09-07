@@ -23,6 +23,7 @@ const EmailDisplay = () => {
   return (
     <AppContext.Consumer>
       {({ filteredMessages }) => {
+
         return (
           <Container id="hrLineAboveEmail">
             <br />

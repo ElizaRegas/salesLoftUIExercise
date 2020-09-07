@@ -28,6 +28,7 @@ const EmailItem = ({ message, monthName, emailTimeStamp }) => {
                     <Form.Group controlId="formBasicCheckbox">
                       <Form.Check
                         type="checkbox"
+                        checked={message.isSelected}
                         id="emailCheckbox"
                         onChange={(e) => {
                           handleCheckboxToggle(

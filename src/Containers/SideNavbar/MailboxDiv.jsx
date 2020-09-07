@@ -11,6 +11,7 @@ import {
   faCaretDown,
   faBuilding,
   faPlane,
+  faTrash,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import mailboxDivInfo from "../../mailboxDivInfo.json";
@@ -39,6 +40,9 @@ const MailboxDiv = () => {
       case "faStickyNote":
         icon = faStickyNote;
         break;
+      case "faTrash":
+        icon = faTrash;
+        break;
       default:
     }
     return icon;
@@ -52,7 +56,14 @@ const MailboxDiv = () => {
             <div id="staticMailbox">
               {mailboxDivInfo.map((mailbox) => {
                 return (
-                  <Row className="mailboxRow">
+                  <Row
+                    className="mailboxRow"
+                    onClick={
+                      mailbox.clickHandler
+                        ? () => setEmailFilters(mailbox.clickHandler)
+                        : () => {}
+                    }
+                  >
                     <FontAwesomeIcon
                       className="mailboxIcon"
                       icon={getIcon(mailbox.icon)}
