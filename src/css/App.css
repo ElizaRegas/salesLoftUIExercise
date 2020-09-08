@@ -351,7 +351,7 @@ body {
 #topNavbar {
   padding: 10px;
   border-bottom: solid 1px #eceff1;
-  min-width: 1200px;
+  min-width: 100vw;
   overflow: auto;
 }
 
@@ -370,10 +370,10 @@ body {
   }
 }
 
-@media screen and (min-width: 1399px) and (max-width: 1200px) {
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
   #rightSideButtons {
     position: relative;
-    left: 20px;
+    left: 140px;
   }
   #searchBar {
     position: relative;
@@ -381,22 +381,87 @@ body {
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 970px) {
-  body {
+@media screen and (max-width: 1084px) {
+  #rightSideButtons {
+    display: none;
+  }
+  #topNavbar {
+    padding: 10px;
+    border-bottom: solid 1px #eceff1;
+    min-width: 100%;
+    overflow: auto;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 970px) {
+  .emailStar {
+    display: none;
+  }
+  #bodyWidth {
+    width: 500px;
     min-width: 320px;
   }
-  #sideBar {
-    display: none !important;
+  #importantChevron {
+    display: none;
   }
-  /* #bodyWidth {
-    width: 320px;
-  } */
   #searchFormGroup {
-    width: 400px;
-    min-width: 400px;
+    width: 63vw;
+    min-width: 50vw;
     margin: auto;
   }
   #rightSideButtons {
     display: none;
+  }
+}
+
+@media screen and (min-width: 661px) and (max-width: 767px) {
+  .emailStar {
+    display: none;
+  }
+  #importantChevron {
+    display: none;
+  }
+  #rightSideButtons {
+    display: none;
+  }
+  #searchFormGroup {
+    width: 55vw;
+    min-width: 320px;
+    margin: auto;
+  }
+  #sideBar {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 660px) {
+  .emailStar {
+    display: none;
+  }
+  #header {
+    display: none;
+  }
+  #importantChevron {
+    display: none;
+  }
+  #logoSection {
+    min-width: 115px;
+  }
+  #rightSideButtons {
+    display: none;
+  }
+  #searchFormGroup {
+    width: 70vw;
+    min-width: 320px;
+    margin: auto;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  #sideBar {
+    display: none;
+  }
+  #topNavbar {
+    width: 100vw;
   }
 }

@@ -25,7 +25,7 @@ const EmailItem = ({ message, monthName, emailTimeStamp }) => {
                 style={{ height: emailIsOpen ? "100%" : "50px" }}
               >
                 <Row>
-                  <Col xs={2}>
+                  <Col xs={1} md={2}>
                     <Form.Group controlId="formBasicCheckbox">
                       <Form.Check
                         type="checkbox"
@@ -49,14 +49,14 @@ const EmailItem = ({ message, monthName, emailTimeStamp }) => {
                       />
                     </Form.Group>
                   </Col>
-                  <Col xs={3}>{message.sender}</Col>
-                  <Col xs={5} className="subjectLine">
+                  <Col xs={4} sm={4}>
+                    {message.sender}
+                  </Col>
+                  <Col xs={4} sm={4} className="subjectLine">
                     {message.subject}
                   </Col>
-                  <Col xs={2}>
-                    <span>
-                      {monthName} {emailTimeStamp.getDate()}
-                    </span>
+                  <Col xs={2} sm={2}>
+                    {monthName} {emailTimeStamp.getDate()}
                   </Col>
                 </Row>
                 <Row>
