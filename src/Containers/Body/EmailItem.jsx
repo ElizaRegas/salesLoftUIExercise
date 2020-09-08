@@ -63,7 +63,7 @@ const EmailItem = ({ message, monthName, emailTimeStamp }) => {
                 </Row>
                 <br />
                 <Row>
-                  <Card.Body
+                  <Card.Body id="emailBodyText"
                     dangerouslySetInnerHTML={{ __html: message.body }}
                   />
                 </Row>
