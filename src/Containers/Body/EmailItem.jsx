@@ -49,10 +49,10 @@ const EmailItem = ({ message, monthName, emailTimeStamp }) => {
                       />
                     </Form.Group>
                   </Col>
-                  <Col xs={4} sm={3}>
+                  <Col xs={4} sm={4}>
                     {message.sender}
                   </Col>
-                  <Col xs={4} sm={5} className="subjectLine">
+                  <Col xs={4} sm={4} className="subjectLine">
                     {message.subject}
                   </Col>
                   <Col xs={2} sm={2}>
