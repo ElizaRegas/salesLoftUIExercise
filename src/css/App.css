@@ -385,6 +385,13 @@ body {
   #rightSideButtons {
     display: none;
   }
+  #topNavbar {
+    padding: 10px;
+    border-bottom: solid 1px #eceff1;
+    min-width: 100%;
+    overflow: auto;
+    margin: auto;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 970px) {
@@ -419,22 +426,21 @@ body {
     display: none;
   }
   #searchFormGroup {
-    width: 420px;
+    width: 55vw;
     min-width: 320px;
     margin: auto;
   }
   #sideBar {
     display: none;
   }
-} 
+}
 
 @media screen and (min-width: 320px) and (max-width: 660px) {
-
   .emailStar {
     display: none;
   }
   #header {
-    display:none;
+    display: none;
   }
   #importantChevron {
     display: none;
@@ -454,5 +460,8 @@ body {
   }
   #sideBar {
     display: none;
+  }
+  #topNavbar {
+    width: 100vw;
   }
 }
