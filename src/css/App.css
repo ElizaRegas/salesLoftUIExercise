@@ -381,22 +381,73 @@ body {
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 970px) {
-  body {
+@media screen and (min-width: 1199px) and (max-width: 768px) {
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 970px) {
+  .emailStar {
+    display: none;
+  }
+  #bodyWidth {
+    width: 500px;
     min-width: 320px;
   }
-  #sideBar {
-    display: none !important;
+  #importantChevron {
+    display: none;
   }
-  /* #bodyWidth {
-    width: 320px;
-  } */
   #searchFormGroup {
-    width: 400px;
-    min-width: 400px;
+    width: 600px;
+    min-width: 600px;
     margin: auto;
   }
   #rightSideButtons {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 661px) and (max-width: 767px) {
+  .emailStar {
+    display: none;
+  }
+  #importantChevron {
+    display: none;
+  }
+  #rightSideButtons {
+    display: none;
+  }
+  #searchFormGroup {
+    width: 420px;
+    min-width: 320px;
+    margin: auto;
+  }
+  #sideBar {
+    display: none;
+  }
+} 
+
+@media screen and (min-width: 320px) and (max-width: 660px) {
+  
+  .emailStar {
+    display: none;
+  }
+  #header {
+    display:none;
+  }
+  #importantChevron {
+    display: none;
+  }
+  #rightSideButtons {
+    display: none;
+  }
+  #searchFormGroup {
+    position: relative;
+    left: -100px;
+    width: 80vw;
+    min-width: 320px;
+    margin: auto;
+  }
+  #sideBar {
     display: none;
   }
 }

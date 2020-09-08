@@ -9,7 +9,6 @@ import {
 import AppContext from "../../AppContext";
 
 const CategoryHeader = () => {
-
   return (
     <AppContext.Consumer>
       {({ emailFilters, setEmailFilters }) => {
@@ -17,12 +16,13 @@ const CategoryHeader = () => {
           <div>
             <Row id="categoryHeaders">
               <Col
-                xs={3}
+                xs={2}
+                md={3}
                 className={
                   emailFilters.value === "inbox" && emailFilters.type === "tag"
                     ? "activeInbox"
                     : "inactiveCategoryTab"
-                } 
+                }
                 onClick={() =>
                   setEmailFilters({
                     type: "tag",
@@ -34,7 +34,8 @@ const CategoryHeader = () => {
                 <span>Inbox</span>
               </Col>
               <Col
-                xs={3}
+                xs={2}
+                md={3}
                 className={
                   emailFilters.value === "travel" && emailFilters.type === "tag"
                     ? "activeTravel"
@@ -45,12 +46,14 @@ const CategoryHeader = () => {
                     type: "tag",
                     value: "travel",
                   })
-                }              >
+                }
+              >
                 <FontAwesomeIcon className="mailboxIcon" icon={faPlane} />
                 <span>Travel</span>
               </Col>
               <Col
-                xs={3}
+                xs={2}
+                md={3}
                 className={
                   emailFilters.value === "work" && emailFilters.type === "tag"
                     ? "activeWork"
@@ -61,7 +64,8 @@ const CategoryHeader = () => {
                     type: "tag",
                     value: "work",
                   })
-                }              >
+                }
+              >
                 <FontAwesomeIcon className="mailboxIcon" icon={faBuilding} />
                 <span>Work</span>
               </Col>
