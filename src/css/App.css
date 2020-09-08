@@ -118,6 +118,11 @@ body {
 }
 .mailboxRow {
   padding: 5px 10px 10px 20px;
+  cursor: pointer;
+}
+
+.mailboxRow:hover {
+  background: #f1f3f4;
 }
 
 .meetDiv {
@@ -180,6 +185,10 @@ body {
   box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302),
     0 1px 3px 1px rgba(60, 64, 67, 0.149);
   border: none;
+}
+
+#emailBodyText {
+  margin-top: 30px;
 }
 
 #emailCheckbox {
