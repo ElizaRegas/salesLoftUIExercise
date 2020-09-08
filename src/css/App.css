@@ -156,7 +156,7 @@ body {
 }
 
 #bodyWidth {
-  min-width: 750px;
+  /* min-width: 750px; */
   overflow: auto;
 }
 
