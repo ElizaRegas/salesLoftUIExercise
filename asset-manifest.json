@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/salesLoftUIExercise/static/css/main.942745da.chunk.css",
+    "main.css": "/salesLoftUIExercise/static/css/main.05ca82e5.chunk.css",
     "main.js": "/salesLoftUIExercise/static/js/main.5a2a13be.chunk.js",
     "main.js.map": "/salesLoftUIExercise/static/js/main.5a2a13be.chunk.js.map",
     "runtime-main.js": "/salesLoftUIExercise/static/js/runtime-main.579f4547.js",
@@ -8,16 +8,16 @@
     "static/js/2.8f2714ca.chunk.js": "/salesLoftUIExercise/static/js/2.8f2714ca.chunk.js",
     "static/js/2.8f2714ca.chunk.js.map": "/salesLoftUIExercise/static/js/2.8f2714ca.chunk.js.map",
     "index.html": "/salesLoftUIExercise/index.html",
-    "precache-manifest.0d0d92083e3565ca745a92957e508676.js": "/salesLoftUIExercise/precache-manifest.0d0d92083e3565ca745a92957e508676.js",
+    "precache-manifest.21614ec2cf3c78891e5d7112f4879656.js": "/salesLoftUIExercise/precache-manifest.21614ec2cf3c78891e5d7112f4879656.js",
     "service-worker.js": "/salesLoftUIExercise/service-worker.js",
-    "static/css/main.942745da.chunk.css.map": "/salesLoftUIExercise/static/css/main.942745da.chunk.css.map",
+    "static/css/main.05ca82e5.chunk.css.map": "/salesLoftUIExercise/static/css/main.05ca82e5.chunk.css.map",
     "static/js/2.8f2714ca.chunk.js.LICENSE.txt": "/salesLoftUIExercise/static/js/2.8f2714ca.chunk.js.LICENSE.txt",
     "static/media/gmailLogo.png": "/salesLoftUIExercise/static/media/gmailLogo.acfeaf86.png"
   },
   "entrypoints": [
     "static/js/runtime-main.579f4547.js",
     "static/js/2.8f2714ca.chunk.js",
-    "static/css/main.942745da.chunk.css",
+    "static/css/main.05ca82e5.chunk.css",
     "static/js/main.5a2a13be.chunk.js"
   ]
 }
