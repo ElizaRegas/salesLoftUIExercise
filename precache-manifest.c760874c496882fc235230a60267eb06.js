@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a613f9d6635ee3e91186e337b2d12d67",
+    "revision": "bae9be2bf9189545bfa2084d78f0037b",
     "url": "/salesLoftUIExercise/index.html"
   },
   {
-    "revision": "bc1d976b94929b1e2605",
+    "revision": "d29210faee57bffa113b",
     "url": "/salesLoftUIExercise/static/css/main.05ca82e5.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/salesLoftUIExercise/static/js/2.8f2714ca.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "bc1d976b94929b1e2605",
-    "url": "/salesLoftUIExercise/static/js/main.5a2a13be.chunk.js"
+    "revision": "d29210faee57bffa113b",
+    "url": "/salesLoftUIExercise/static/js/main.5388ec0b.chunk.js"
   },
   {
     "revision": "65e451a634e7f0cc399a",

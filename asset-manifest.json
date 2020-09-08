@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/salesLoftUIExercise/static/css/main.05ca82e5.chunk.css",
-    "main.js": "/salesLoftUIExercise/static/js/main.5a2a13be.chunk.js",
-    "main.js.map": "/salesLoftUIExercise/static/js/main.5a2a13be.chunk.js.map",
+    "main.js": "/salesLoftUIExercise/static/js/main.5388ec0b.chunk.js",
+    "main.js.map": "/salesLoftUIExercise/static/js/main.5388ec0b.chunk.js.map",
     "runtime-main.js": "/salesLoftUIExercise/static/js/runtime-main.579f4547.js",
     "runtime-main.js.map": "/salesLoftUIExercise/static/js/runtime-main.579f4547.js.map",
     "static/js/2.8f2714ca.chunk.js": "/salesLoftUIExercise/static/js/2.8f2714ca.chunk.js",
     "static/js/2.8f2714ca.chunk.js.map": "/salesLoftUIExercise/static/js/2.8f2714ca.chunk.js.map",
     "index.html": "/salesLoftUIExercise/index.html",
-    "precache-manifest.21614ec2cf3c78891e5d7112f4879656.js": "/salesLoftUIExercise/precache-manifest.21614ec2cf3c78891e5d7112f4879656.js",
+    "precache-manifest.c760874c496882fc235230a60267eb06.js": "/salesLoftUIExercise/precache-manifest.c760874c496882fc235230a60267eb06.js",
     "service-worker.js": "/salesLoftUIExercise/service-worker.js",
     "static/css/main.05ca82e5.chunk.css.map": "/salesLoftUIExercise/static/css/main.05ca82e5.chunk.css.map",
     "static/js/2.8f2714ca.chunk.js.LICENSE.txt": "/salesLoftUIExercise/static/js/2.8f2714ca.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.579f4547.js",
     "static/js/2.8f2714ca.chunk.js",
     "static/css/main.05ca82e5.chunk.css",
-    "static/js/main.5a2a13be.chunk.js"
+    "static/js/main.5388ec0b.chunk.js"
   ]
 }
