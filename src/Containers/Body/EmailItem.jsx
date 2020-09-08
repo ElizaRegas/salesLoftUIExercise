@@ -56,7 +56,9 @@ const EmailItem = ({ message, monthName, emailTimeStamp }) => {
                     {message.subject}
                   </Col>
                   <Col xs={2} sm={2}>
-                    {monthName} {emailTimeStamp.getDate()}
+                    <span id="emailDate">
+                      {monthName} {emailTimeStamp.getDate()}
+                    </span>
                   </Col>
                 </Row>
                 <br />
