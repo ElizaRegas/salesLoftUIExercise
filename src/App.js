@@ -19,6 +19,7 @@ const App = () => {
     utils.getLocalMessages(messages)
   );
   const [filteredMessages, setFilteredMessages] = useState(allMessages);
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
   // to be used for future functionality
   // const [isHovering, setIsHovering] = useState(false);
 
@@ -63,7 +64,9 @@ const App = () => {
         setEmailFilters,
         filteredMessages,
         setFilteredMessages,
-        handleTrashToggle
+        handleTrashToggle,
+        menuIsOpen,
+        setMenuIsOpen
       }}
     >
       <div>

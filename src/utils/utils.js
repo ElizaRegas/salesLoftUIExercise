@@ -9,7 +9,7 @@ const getLocalMessages = (messages) => {
       return {
         ...message,
         isSelected: false,
-        isTrash: false
+        isTrash: false,
       };
     });
     // adding the current array to local storage
@@ -19,7 +19,13 @@ const getLocalMessages = (messages) => {
 };
 
 // function to handle trash checkbox(es)
-const handleCheckboxToggle = (type, id, isSelected, filteredMessages, setFilteredMessages) => {
+const handleCheckboxToggle = (
+  type,
+  id,
+  isSelected,
+  filteredMessages,
+  setFilteredMessages
+) => {
   if (type === "individualCheckbox") {
     // targeting individual checkboxes
     const messageObj = filteredMessages.find((message) => {
@@ -33,15 +39,21 @@ const handleCheckboxToggle = (type, id, isSelected, filteredMessages, setFiltere
       newFilteredMessages[index] = messageObj;
       console.log(newFilteredMessages);
       setFilteredMessages(newFilteredMessages);
-      window.localStorage.setItem("messages", JSON.stringify(newFilteredMessages));
+      window.localStorage.setItem(
+        "messages",
+        JSON.stringify(newFilteredMessages)
+      );
     }
   } else if (type === "globalCheckbox") {
-    // targeting all selected messages via the global checkbox 
+    // targeting all selected messages via the global checkbox
     const newFilteredMessages = filteredMessages.map((message) => {
       return { ...message, isSelected };
     });
     setFilteredMessages(newFilteredMessages);
-    window.localStorage.setItem("messages", JSON.stringify(newFilteredMessages));
+    window.localStorage.setItem(
+      "messages",
+      JSON.stringify(newFilteredMessages)
+    );
   }
 };
 
@@ -53,8 +65,7 @@ const handleUpdateFilter = (allMessages, emailFilters, setFilteredMessages) => {
       // filtering travel and work emails to return separately
       if (emailFilters.value !== "inbox") {
         const logicTest =
-          message.isTrash !== true &&
-          message.tags.includes(emailFilters.value);
+          message.isTrash !== true && message.tags.includes(emailFilters.value);
         console.log("logic test: ", logicTest);
         return logicTest;
       } else {
@@ -72,17 +83,27 @@ const handleUpdateFilter = (allMessages, emailFilters, setFilteredMessages) => {
   window.localStorage.setItem("messages", JSON.stringify(filteredArray));
 };
 
+const openCloseMenu = (menuIsOpen, setMenuIsOpen) => {
+  if (!menuIsOpen) {
+    setMenuIsOpen(true);
+    console.log("open now");
+  } else {
+    setMenuIsOpen(false);
+    console.log("closed now");
+  }
+};
+
 const refreshPage = () => {
   window.location.reload();
   console.log("page refreshed");
-}
+};
 
 const utils = {
   getLocalMessages,
   handleCheckboxToggle,
-  handleUpdateFilter, 
-  refreshPage
-}
+  handleUpdateFilter,
+  openCloseMenu,
+  refreshPage,
+};
 
 export default utils;
-

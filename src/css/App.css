@@ -132,6 +132,13 @@ body {
 .meetItemText {
   padding: 5px 10px 20px 0px;
 }
+
+.menuItem {
+  position: relative;
+  left: 52px;
+  padding-bottom: 10px;
+}
+
 .searchbarButton:hover {
   border: none;
 }
@@ -273,6 +280,10 @@ body {
   height: 200px;
   overflow: auto;
   resize: both;
+}
+
+#menuItems {
+  display: none;
 }
 
 #profilePic {
@@ -422,6 +433,15 @@ body {
   #importantChevron {
     display: none;
   }
+  #menuItems {
+    position: absolute;
+    top: 85px;
+    background: rgba(255, 255, 255, 1);
+    z-index: 99;
+    width: 225px;
+    height: 80%;
+    
+  }
   #rightSideButtons {
     display: none;
   }
@@ -455,6 +475,9 @@ body {
   }
   #logoSection {
     min-width: 115px;
+  }
+  #menuItems {
+    display: block;
   }
   #rightSideButtons {
     display: none;
