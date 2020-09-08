@@ -1,8 +1,8 @@
 import React from 'react';
 import ComposeButton from './ComposeButton';
 import MailboxDiv from './MailboxDiv';
-import "../../css/App.css";
 import MeetDiv from './MeetDiv';
+import "../../css/App.css";
 
 const SideNavbar = () => {
 

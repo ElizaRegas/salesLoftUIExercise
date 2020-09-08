@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Row, Col, Card, Form } from "react-bootstrap";
 import { Star } from "react-bootstrap-icons";
-import "../../css/App.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import AppContext from "../../AppContext";
 import utils from "../../utils/utils.js";
+import "../../css/App.css";
 
 const EmailItem = ({ message, monthName, emailTimeStamp }) => {
   const [emailIsOpen, setEmailIsOpen] = useState(false);

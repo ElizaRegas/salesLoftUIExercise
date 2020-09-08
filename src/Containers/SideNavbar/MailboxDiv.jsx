@@ -50,7 +50,7 @@ const MailboxDiv = () => {
 
   return (
     <AppContext.Consumer>
-      {({ emailFilters, setEmailFilters }) => {
+      {({ setEmailFilters }) => {
         return (
           <div id="mailboxDiv" className="bottomBoxShadow">
             <div id="staticMailbox">
