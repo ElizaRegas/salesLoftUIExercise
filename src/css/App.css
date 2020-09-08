@@ -3,13 +3,45 @@ body {
   font-family: "Roboto";
 }
 
+.activeInbox {
+  border-bottom: solid 5px red;
+  color: red;
+  padding-bottom: 15px;
+  cursor: pointer;
+}
+
+.activeTravel {
+  border-bottom: solid 5px blue;
+  color: blue;
+  padding-bottom: 15px;
+}
+
+.activeWork {
+  border-bottom: solid 5px green;
+  color: green;
+  padding-bottom: 15px;
+}
+
+.activeInbox:hover,
+.activeTravel:hover,
+.activeWork:hover {
+  background-color: #f1f3f4;
+}
+
+.categoryHover:hover {
+  background-color: #f1f3f4;
+}
+
+.bodyHeaderIcon:hover {
+  border-radius: 50% !important;
+}
+
 .bottomBoxShadow {
   box-shadow: -1px 2px 2px #f1f3f4;
 }
 
 .button {
   background: none;
-  border-radius: 50%;
   border: none;
   color: #5f6368;
   width: 34px;
@@ -35,17 +67,23 @@ body {
 }
 
 .categoryItemsText {
-  padding: 0px 16px
-}
-.emailMessage {
-  padding: 10px;
-  height: 3.4vw;
-  overflow: auto;
+  padding: 0px 16px;
 }
 
-.emailMessage:active,
+.emailMessage {
+  padding: 10px;
+  height: 50px;
+  overflow: hidden;
+}
+
 .emailMessage:hover {
-  height: 100%;
+  box-shadow: inset 1px 0 0 #dadce0, inset -1px 0 0 #dadce0,
+    0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+  z-index: 1;
+}
+
+.emailStar {
+  margin: 0px 20px 4px;
 }
 
 .form-check {
@@ -58,6 +96,8 @@ body {
   box-shadow: none;
   height: 50px;
   font-size: 17px;
+  text-align: center;
+  margin-right: -50px !important;
 }
 
 .form-control:focus {
@@ -65,6 +105,9 @@ body {
   border: solid 1px lightgrey;
 }
 
+.inactiveCategoryTab:hover {
+  background-color: #f1f3f4;
+}
 .input-group-text {
   border: none;
   background-color: transparent;
@@ -100,13 +143,23 @@ body {
   padding: 10px;
 }
 
+#bodyWidth {
+  min-width: 750px;
+  overflow: auto;
+}
+
 #caretDown {
   position: relative;
   top: 10px;
 }
 
-#catogoriesText {
+#categoryText {
   margin: 19px;
+}
+
+#categoryHeaders {
+  margin: 5px 8px 15px 5px;
+  cursor: pointer;
 }
 
 #composeButton {
@@ -120,6 +173,10 @@ body {
   box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302),
     0 1px 3px 1px rgba(60, 64, 67, 0.149);
   border: none;
+}
+
+#emailCheckbox {
+  padding: 4px 0px 0px 13px;
 }
 
 #faTag {
@@ -177,7 +234,7 @@ body {
   left: 8px;
 }
 
-#hrLineAboveEmail{
+#hrLineAboveEmail {
   border-top: solid 1px #eceff1;
   overflow: scroll;
 }
@@ -206,8 +263,14 @@ body {
   margin: 5px 0px;
 }
 
+#logoSection {
+  min-width: 225px;
+  position: relative;
+  left: 20px;
+}
+
 #mailboxDiv {
-  height: 175px;
+  height: 200px;
   overflow: auto;
   resize: both;
 }
@@ -218,7 +281,7 @@ body {
 }
 
 #profilePicImg {
-  width: 50px;
+  width: 45px;
 }
 
 #profilePicImg:active,
@@ -227,7 +290,6 @@ body {
 }
 
 #redo {
-
 }
 
 #redoButton {
@@ -238,15 +300,23 @@ body {
   height: 44px;
   position: relative;
   top: -8px;
+  left: 15vw;
+  min-width: 225px;
+  overflow: auto;
 }
 
+#searchBar {
+  position: relative;
+  left: 45px;
+}
 #searchButton {
   background-color: #f1f3f4;
   color: #5f6368;
-  width: 6vw;
+  width: 8vw;
   height: 50px;
   padding: 0px;
-  border-radius: 8px;
+  border-radius: 8px 0px 0px 8px;
+  position: absolute;
 }
 
 #searchButton:active,
@@ -257,10 +327,21 @@ body {
   color: black;
 }
 
+#searchFormGroup {
+  position: relative;
+  left: 20px;
+  width: 800px;
+  min-width: 700px;
+}
+
 #settingsCogImg {
   width: 50px;
   position: relative;
   left: -15px;
+}
+
+#sideBar {
+  min-width: 225px;
 }
 
 #staticMailbox {
@@ -270,4 +351,52 @@ body {
 #topNavbar {
   padding: 10px;
   border-bottom: solid 1px #eceff1;
+  min-width: 1200px;
+  overflow: auto;
+}
+
+@media screen and (max-width: 1400px) {
+  #rightSideButtons {
+    position: relative;
+    left: 10vw;
+    min-width: 200px;
+    overflow: hidden;
+  }
+  #searchFormGroup {
+    position: relative;
+    left: 2vw;
+    width: 700px;
+    min-width: 700px;
+  }
+}
+
+@media screen and (min-width: 1399px) and (max-width: 1200px) {
+  #rightSideButtons {
+    position: relative;
+    left: 20px;
+  }
+  #searchBar {
+    position: relative;
+    left: 10px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 970px) {
+  body {
+    min-width: 320px;
+  }
+  #sideBar {
+    display: none !important;
+  }
+  /* #bodyWidth {
+    width: 320px;
+  } */
+  #searchFormGroup {
+    width: 400px;
+    min-width: 400px;
+    margin: auto;
+  }
+  #rightSideButtons {
+    display: none;
+  }
 }

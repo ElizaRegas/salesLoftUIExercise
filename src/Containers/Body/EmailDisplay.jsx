@@ -1,10 +1,7 @@
 import React from "react";
-import { Container, Row, Col, Card, Form } from "react-bootstrap";
-import messages from "../../emails.json";
-import { Star } from "react-bootstrap-icons";
-import "../../css:scss/App.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import EmailItem from "./EmailItem";
+import AppContext from "../../AppContext";
+import "../../css/App.css";
 
 const EmailDisplay = () => {
   const month = [
@@ -23,47 +20,28 @@ const EmailDisplay = () => {
   ];
 
   return (
-    <Container id="hrLineAboveEmail">
-      <br />
-      {messages.messages.map((message) => {
-        const emailTimeStamp = new Date(`${message.date}`);
-        const monthName = month[emailTimeStamp.getMonth()];
-        
+    <AppContext.Consumer>
+      {({ filteredMessages }) => {
 
         return (
-          <Row>
-            <Col xs={10}>
-              <Card className="emailMessage">
-                <Row>
-                  <Col xs={2}>
-                    <Form.Group controlId="formBasicCheckbox">
-                      <Form.Check type="checkbox" />
-                      <Star star="1" />
-                      <FontAwesomeIcon
-                        id="importantChevron"
-                        icon={faChevronRight}
-                      />
-                    </Form.Group>
-                  </Col>
-                  <Col xs={3}>{message.sender}</Col>
-                  <Col xs={5} className="subjectLine">
-                    {message.subject}
-                  </Col>
-                  <Col xs={2}>
-                    {monthName} {emailTimeStamp.getDate()}
-                  </Col>
-                </Row>
-                <Row>
-                  <Card.Body
-                    dangerouslySetInnerHTML={{ __html: message.body }}
-                  />
-                </Row>
-              </Card>
-            </Col>
-          </Row>
+          <div id="hrLineAboveEmail">
+            <br />
+            {filteredMessages.map((message) => {
+              const emailTimeStamp = new Date(`${message.date}`);
+              const monthName = month[emailTimeStamp.getMonth()];
+
+              return (
+                <EmailItem
+                  monthName={monthName}
+                  message={message}
+                  emailTimeStamp={emailTimeStamp}
+                />
+              );
+            })}
+          </div>
         );
-      })}
-    </Container>
+      }}
+    </AppContext.Consumer>
   );
 };
 

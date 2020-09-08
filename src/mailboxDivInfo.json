@@ -28,5 +28,14 @@
     "name": "Drafts",
     "icon": "faStickyNote",
     "id": "draftsId"
+  },
+  {
+    "name": "Trash",
+    "icon": "faTrash",
+    "id": "trashId",
+    "clickHandler": {
+      "type": "delete",
+      "value": null
+    }
   }
 ]

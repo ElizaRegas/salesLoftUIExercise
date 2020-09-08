@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 import googlePlusSign from "../../images/googlePlusSign.png";
-import "../../css:scss/App.css";
+import "../../css/App.css";
 
 
 export default function ComposeButton() {
