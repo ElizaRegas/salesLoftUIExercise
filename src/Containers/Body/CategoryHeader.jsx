@@ -22,7 +22,7 @@ const CategoryHeader = () => {
                   emailFilters.value === "inbox" && emailFilters.type === "tag"
                     ? "activeInbox"
                     : "inactiveCategoryTab"
-                }
+                } 
                 onClick={() =>
                   setEmailFilters({
                     type: "tag",

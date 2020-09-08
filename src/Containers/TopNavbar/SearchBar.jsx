@@ -11,12 +11,12 @@ import {
 } from "react-bootstrap";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "../../css:scss/App.css";
+import "../../css/App.css";
 
 const SearchBar = () => {
   return (
     <Form>
-      <Row>
+      <Row id="searchFormGroup">
         <Col xs={1}>
           <InputGroup>
             <InputGroup.Prepend>
@@ -34,6 +34,7 @@ const SearchBar = () => {
           <FormControl
             aria-describedby="basic-addon1"
             placeholder="Search mail"
+            id="searchForm"
           />
         </Col>
         <Col xs={1}>

@@ -4,16 +4,23 @@ import {
   faCaretDown,
   faRedo,
   faEllipsisV,
-  faTrash
+  faTrash,
+  faTrashRestore,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "../../css:scss/App.css";
+import "../../css/App.css";
 import AppContext from "../../AppContext";
+import utils from "../../utils/utils.js";
 
 const BodyHeader = () => {
   return (
     <AppContext.Consumer>
-      {({ handleCheckboxToggle, handleTrashToggle }) => {
+      {({
+        handleCheckboxToggle,
+        handleTrashToggle,
+        filteredMessages,
+        setFilteredMessages,
+      }) => {
         return (
           <div>
             <Row>
@@ -24,49 +31,48 @@ const BodyHeader = () => {
                       className="button"
                       aria-label="Checkbox for following text input"
                       onChange={(e) => {
-                        handleCheckboxToggle(
+                        utils.handleCheckboxToggle(
                           "globalCheckbox",
                           null,
-                          e.target.checked
+                          e.target.checked,
+                          filteredMessages,
+                          setFilteredMessages
                         );
                       }}
                     />
                     <FontAwesomeIcon id="caretDown" icon={faCaretDown} />
-                    <Button
-                      id="redoButton"
-                      className="button"
-                      // onClick={() => setIsSidebarOpen(true)}
-                    >
+                    <Button id="redoButton" className="button">
                       <FontAwesomeIcon
                         id="redo"
                         className="bodyHeaderIcon"
                         icon={faRedo}
+                        onClick={utils.refreshPage}
                       />
                     </Button>
-                    <Button
-                      className="button"
-                      // onClick={() => setIsSidebarOpen(true)}
-                    >
-                      <FontAwesomeIcon
-                        className="bodyHeaderIcon"
-                        icon={faEllipsisV}
-                      />
-                    </Button>
-                    <Button
-                      className="button"
-                      // onClick={() => setIsSidebarOpen(true)}
-                    >
+                    <Button className="button">
                       <FontAwesomeIcon
                         className="bodyHeaderIcon"
                         icon={faTrash}
                         onClick={() => handleTrashToggle("delete")}
                       />
                     </Button>
+                    <Button className="button">
+                      <FontAwesomeIcon
+                        className="bodyHeaderIcon"
+                        icon={faTrashRestore}
+                        onClick={() => handleTrashToggle("restore")}
+                      />
+                    </Button>
+                    <Button className="button">
+                      <FontAwesomeIcon
+                        className="bodyHeaderIcon"
+                        icon={faEllipsisV}
+                      />
+                    </Button>
                   </InputGroup.Prepend>
                 </InputGroup>{" "}
               </Col>
             </Row>
-            {/* <CategoryHeader /> */}
           </div>
         );
       }}

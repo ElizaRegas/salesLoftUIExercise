@@ -16,7 +16,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import mailboxDivInfo from "../../mailboxDivInfo.json";
 import AppContext from "../../AppContext.jsx";
-import "../../css:scss/App.css";
+import "../../css/App.css";
 
 const MailboxDiv = () => {
   const getIcon = (iconText) => {

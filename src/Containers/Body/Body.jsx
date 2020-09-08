@@ -5,7 +5,7 @@ import EmailDisplay from "./EmailDisplay";
 
 const Body = () => {
   return (
-    <div>
+    <div id="bodySection">
       <BodyHeader />
       <CategoryHeader />
       <EmailDisplay />

@@ -1,8 +1,7 @@
 import React from "react";
-import { Container } from "react-bootstrap";
-import "../../css:scss/App.css";
 import EmailItem from "./EmailItem";
 import AppContext from "../../AppContext";
+import "../../css/App.css";
 
 const EmailDisplay = () => {
   const month = [
@@ -25,7 +24,7 @@ const EmailDisplay = () => {
       {({ filteredMessages }) => {
 
         return (
-          <Container id="hrLineAboveEmail">
+          <div id="hrLineAboveEmail">
             <br />
             {filteredMessages.map((message) => {
               const emailTimeStamp = new Date(`${message.date}`);
@@ -39,7 +38,7 @@ const EmailDisplay = () => {
                 />
               );
             })}
-          </Container>
+          </div>
         );
       }}
     </AppContext.Consumer>
