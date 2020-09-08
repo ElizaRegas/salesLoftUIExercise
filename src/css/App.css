@@ -485,6 +485,7 @@ body {
   }
   #menuItems {
     display: block;
+    top: 54px;
   }
   #rightSideButtons {
     display: none;
