@@ -205,7 +205,6 @@ body {
 #hamburger {
   width: 50px;
   position: relative;
-  top: 3px;
 }
 
 #hamburger:hover {
@@ -283,6 +282,13 @@ body {
 }
 
 #menuItems {
+  position: absolute;
+  top: 85px;
+  background: rgba(255, 255, 255, 1);
+  z-index: 99;
+  width: 225px;
+  height: 80%;
+  border-right: solid 2px #f1f3f4;
   display: none;
 }
 
@@ -434,13 +440,7 @@ body {
     display: none;
   }
   #menuItems {
-    position: absolute;
-    top: 85px;
-    background: rgba(255, 255, 255, 1);
-    z-index: 99;
-    width: 225px;
-    height: 80%;
-    
+    display: block;
   }
   #rightSideButtons {
     display: none;
