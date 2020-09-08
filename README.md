@@ -17,7 +17,10 @@ This is a coding challenge presented to me as part of an interview process with 
 
 ## Installation
 
-First, fork the repo. Then, open the application in your code editor. After that, run npm install.
+1. Clone the repo. 
+2. Open the application in your code editor or in terminal. 
+3. Run npm install.
+4. Run npm start
 
 ## Usage
 
@@ -41,7 +44,11 @@ Contact the creator (for email and Github, see below) for information on contrib
 
 ## Tests
 
-Tests are included in the utils.test.js file
+Tests are included in the utils.test.js file. 
+
+To run tests: 
+1. Open terminal and type in 'npm test'.
+2. Follow prompts to run all tests by typing 'a', or the selection of your choice.
 
 ## Questions
 
