@@ -437,10 +437,15 @@ body {
 
 @media screen and (min-width: 320px) and (max-width: 660px) {
   .emailMessage {
-    height: 70px;
+    width: 100vw;
+    flex-direction: column;
   }
   .emailStar {
     display: none;
+  }
+  #emailDate {
+    display: flex;
+    flex-flow: ;
   }
   #header {
     display: none;
