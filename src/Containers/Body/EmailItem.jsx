@@ -19,7 +19,7 @@ const EmailItem = ({ message, monthName, emailTimeStamp }) => {
       {({ handleCheckboxToggle, filteredMessages, setFilteredMessages }) => {
         return (
           <Row onClick={changeEmailView}>
-            <Col xs={12}>
+            <Col xs={7} sm={12}>
               <Card
                 className="emailMessage"
                 style={{ height: emailIsOpen ? "100%" : "50px" }}
