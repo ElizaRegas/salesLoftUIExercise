@@ -22,7 +22,6 @@ const EmailItem = ({ message, monthName, emailTimeStamp }) => {
             <Col xs={7} sm={12}>
               <Card
                 className="emailMessage"
-                style={{ height: emailIsOpen ? "100%" : "50px" }}
               >
                 <Row>
                   <Col xs={1} md={2}>
@@ -61,12 +60,14 @@ const EmailItem = ({ message, monthName, emailTimeStamp }) => {
                     </span>
                   </Col>
                 </Row>
-                <br />
-                <Row>
-                  <Card.Body id="emailBodyText"
-                    dangerouslySetInnerHTML={{ __html: message.body }}
-                  />
-                </Row>
+                {emailIsOpen && (
+                  <Row>
+                    <Card.Body
+                      id="emailBodyText"
+                      dangerouslySetInnerHTML={{ __html: message.body }}
+                    />
+                  </Row>
+                )}
               </Card>
             </Col>
           </Row>
