@@ -18,7 +18,7 @@ const getLocalMessages = (messages) => {
   }
 };
 
-// function to handle trash checkbox(es)
+// function to handle checkbox(es)
 const handleCheckboxToggle = (
   type,
   id,
@@ -26,48 +26,43 @@ const handleCheckboxToggle = (
   filteredMessages,
   setFilteredMessages
 ) => {
+  let newFilteredMessages;
+
   if (type === "individualCheckbox") {
-    // targeting individual checkboxes
+    // targeting individual checkboxes via id
     const messageObj = filteredMessages.find((message) => {
       return message.id === id;
     });
+    // finding the index of the targeted object
     const index = filteredMessages.indexOf(messageObj);
     if (index > -1) {
       messageObj.isSelected = isSelected;
       // creating a copy of filtered messages to avoid manipulating state directly
-      const newFilteredMessages = filteredMessages;
+      newFilteredMessages = filteredMessages;
+      // updating the targeted object into the copy of filtered array
       newFilteredMessages[index] = messageObj;
-      console.log(newFilteredMessages);
-      setFilteredMessages(newFilteredMessages);
-      window.localStorage.setItem(
-        "messages",
-        JSON.stringify(newFilteredMessages)
-      );
     }
   } else if (type === "globalCheckbox") {
     // targeting all selected messages via the global checkbox
-    const newFilteredMessages = filteredMessages.map((message) => {
+    newFilteredMessages = filteredMessages.map((message) => {
+      // updating the isSelected key value pair with the specified parameter
       return { ...message, isSelected };
     });
-    setFilteredMessages(newFilteredMessages);
-    window.localStorage.setItem(
-      "messages",
-      JSON.stringify(newFilteredMessages)
-    );
   }
+  // setting the updated array to state
+  setFilteredMessages(newFilteredMessages);
+  // setting the updated array to local storage
+  window.localStorage.setItem("messages", JSON.stringify(newFilteredMessages));
 };
 
 const handleUpdateFilter = (allMessages, emailFilters, setFilteredMessages) => {
   // filtering allMessages
   const filteredArray = allMessages.filter((message) => {
-    // emails to be displayed on main page that aren't marked as trask
+    // emails to be displayed on main page that aren't marked as trash
     if (emailFilters.type === "tag") {
       // filtering travel and work emails to return separately
       if (emailFilters.value !== "inbox") {
-        const logicTest =
-          message.isTrash !== true && message.tags.includes(emailFilters.value);
-        console.log("logic test: ", logicTest);
-        return logicTest;
+        return (message.isTrash !== true && message.tags.includes(emailFilters.value));
       } else {
         return !message.isTrash;
       }
@@ -78,24 +73,23 @@ const handleUpdateFilter = (allMessages, emailFilters, setFilteredMessages) => {
       return true;
     }
   });
-  console.log("filtered array: ", filteredArray);
+  // setting state
   setFilteredMessages(filteredArray);
+  // setting local storage
   window.localStorage.setItem("messages", JSON.stringify(filteredArray));
 };
 
+// 
 const openCloseMenu = (menuIsOpen, setMenuIsOpen) => {
   if (!menuIsOpen) {
     setMenuIsOpen(true);
-    console.log("open now");
   } else {
     setMenuIsOpen(false);
-    console.log("closed now");
   }
 };
 
 const refreshPage = () => {
   window.location.reload();
-  console.log("page refreshed");
 };
 
 const utils = {

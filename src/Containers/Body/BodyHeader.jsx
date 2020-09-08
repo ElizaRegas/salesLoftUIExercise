@@ -16,7 +16,6 @@ const BodyHeader = () => {
   return (
     <AppContext.Consumer>
       {({
-        handleCheckboxToggle,
         handleTrashToggle,
         filteredMessages,
         setFilteredMessages,

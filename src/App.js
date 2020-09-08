@@ -14,6 +14,7 @@ const App = () => {
     type: "tag",
     value: "inbox",
   });
+
   // allMessages generates the initial json email file before being filtered
   const [allMessages, setAllMessages] = useState(
     utils.getLocalMessages(messages)
@@ -28,10 +29,12 @@ const App = () => {
     utils.handleUpdateFilter(allMessages, emailFilters, setFilteredMessages);
   }, [emailFilters]);
 
+  // this trash function is stubbed to handle restoration of messages as well, but functionality is not yet in place.
   const handleTrashToggle = (action) => {
     const newAllMessages = allMessages;
-
+    // looping through all checked messages to pin point the index
     const newFilteredMessages = filteredMessages.map((message) => {
+      // updating the newAllMessages array
       if (message.isSelected && action === "delete") {
         const messageId = message.id;
         newAllMessages.forEach((message, index) => {
@@ -44,18 +47,24 @@ const App = () => {
           }
         });
       }
+      // updating newFilteredMessages array
       return {
         ...message,
         isTrash: message.isSelected ? action === "delete" : message.isTrash,
         isSelected: false,
       };
     });
-    console.log("after map: ", newFilteredMessages);
+    // setting values to state
     setAllMessages(newAllMessages);
     setFilteredMessages(newFilteredMessages);
-    window.localStorage.setItem("messages", JSON.stringify(newFilteredMessages));
+    // setting values to local storage
+    window.localStorage.setItem(
+      "messages",
+      JSON.stringify(newFilteredMessages)
+    );
+    // trigger a refresh to remove deleted items from view
     utils.handleUpdateFilter(allMessages, emailFilters, setFilteredMessages);
-  }; 
+  };
 
   return (
     <AppContext.Provider
@@ -66,7 +75,7 @@ const App = () => {
         setFilteredMessages,
         handleTrashToggle,
         menuIsOpen,
-        setMenuIsOpen
+        setMenuIsOpen,
       }}
     >
       <div>
