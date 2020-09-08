@@ -59,6 +59,7 @@ const EmailItem = ({ message, monthName, emailTimeStamp }) => {
                     {monthName} {emailTimeStamp.getDate()}
                   </Col>
                 </Row>
+                <br />
                 <Row>
                   <Card.Body
                     dangerouslySetInnerHTML={{ __html: message.body }}
